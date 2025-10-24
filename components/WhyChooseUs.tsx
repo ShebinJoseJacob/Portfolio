@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.3, margin: "0px 0px -100px 0px" }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4 tracking-tight">
             Why Us
@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true, amount: 0.2, margin: "0px 0px -50px 0px" }}
+              viewport={{ once: true, amount: 0.2 }}
               whileHover={{ y: -4 }}
             >
               {/* Icon */}

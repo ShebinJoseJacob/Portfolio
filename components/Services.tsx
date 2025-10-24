@@ -60,7 +60,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.3, margin: "0px 0px -100px 0px" }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
             Services
@@ -75,7 +75,7 @@ export default function Services() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.1, margin: "0px 0px -50px 0px" }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           {services.map((service, index) => (
             <motion.div
