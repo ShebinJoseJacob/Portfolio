@@ -156,14 +156,15 @@ export default function ContactForm() {
               <select
                 {...register("budget")}
                 id="budget"
-                className="w-full px-4 py-3 bg-primary-800 border border-primary-700 rounded-md text-white focus:outline-none focus:border-accent-cyan transition-colors"
+                className="w-full px-4 py-3 bg-primary-800 border border-primary-700 rounded-md text-white focus:outline-none focus:border-accent-blue transition-colors appearance-none cursor-pointer bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27white%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e')] bg-[length:1.5rem] bg-[right_0.5rem_center] bg-no-repeat"
+                style={{ colorScheme: 'dark' }}
               >
-                <option value="">Select budget range</option>
-                <option value="under-5k">Under $5,000</option>
-                <option value="5k-15k">$5,000 - $15,000</option>
-                <option value="15k-50k">$15,000 - $50,000</option>
-                <option value="50k-plus">$50,000+</option>
-                <option value="not-sure">Not sure yet</option>
+                <option value="" className="bg-primary-800 text-text-muted">Select budget range</option>
+                <option value="under-5k" className="bg-primary-800 text-white">Under $5,000</option>
+                <option value="5k-15k" className="bg-primary-800 text-white">$5,000 - $15,000</option>
+                <option value="15k-50k" className="bg-primary-800 text-white">$15,000 - $50,000</option>
+                <option value="50k-plus" className="bg-primary-800 text-white">$50,000+</option>
+                <option value="not-sure" className="bg-primary-800 text-white">Not sure yet</option>
               </select>
               {errors.budget && (
                 <p className="mt-1 text-sm text-accent-orange">{errors.budget.message}</p>
@@ -178,13 +179,14 @@ export default function ContactForm() {
               <select
                 {...register("timeline")}
                 id="timeline"
-                className="w-full px-4 py-3 bg-primary-800 border border-primary-700 rounded-md text-white focus:outline-none focus:border-accent-cyan transition-colors"
+                className="w-full px-4 py-3 bg-primary-800 border border-primary-700 rounded-md text-white focus:outline-none focus:border-accent-blue transition-colors appearance-none cursor-pointer bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27white%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e')] bg-[length:1.5rem] bg-[right_0.5rem_center] bg-no-repeat"
+                style={{ colorScheme: 'dark' }}
               >
-                <option value="">Select timeline</option>
-                <option value="asap">ASAP</option>
-                <option value="1-3-months">1-3 months</option>
-                <option value="3-6-months">3-6 months</option>
-                <option value="6-plus-months">6+ months</option>
+                <option value="" className="bg-primary-800 text-text-muted">Select timeline</option>
+                <option value="asap" className="bg-primary-800 text-white">ASAP</option>
+                <option value="1-3-months" className="bg-primary-800 text-white">1-3 months</option>
+                <option value="3-6-months" className="bg-primary-800 text-white">3-6 months</option>
+                <option value="6-plus-months" className="bg-primary-800 text-white">6+ months</option>
               </select>
               {errors.timeline && (
                 <p className="mt-1 text-sm text-accent-orange">{errors.timeline.message}</p>

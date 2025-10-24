@@ -138,8 +138,8 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-primary-800/30">
-          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-4">
-            <div>
+          <div className="flex flex-col md:flex-row justify-between items-start gap-4">
+            <div className="text-left">
               <span className="text-text-primary font-bold text-lg">Coders Cafe</span>
               <p className="text-text-muted text-sm mt-1">
                 © {currentYear} Coders Cafe. All rights reserved.
