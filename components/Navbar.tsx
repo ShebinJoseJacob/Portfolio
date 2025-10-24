@@ -111,7 +111,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden fixed inset-0 z-40 bg-primary-950"
+            className="lg:hidden fixed inset-0 z-[60] bg-black"
           >
             <div className="flex flex-col items-center justify-center min-h-screen px-8 py-20">
               <div className="w-full max-w-sm space-y-6">
