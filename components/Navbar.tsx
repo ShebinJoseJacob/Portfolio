@@ -49,10 +49,10 @@ export default function Navbar() {
           : "bg-transparent border-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-[80]">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 relative z-[80]">
             <Link
               href="/"
               className="text-2xl font-bold text-text-primary hover:text-text-secondary transition-colors"
@@ -62,7 +62,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8 relative z-[80]">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -91,10 +91,10 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden relative z-[80]">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-text-primary p-2 rounded-md hover:bg-primary-700/50 transition-colors"
+              className="text-text-primary p-2 rounded-md hover:bg-primary-700/50 transition-colors relative z-[80]"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
