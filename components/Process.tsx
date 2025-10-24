@@ -39,7 +39,7 @@ export default function Process() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3, margin: "0px 0px -100px 0px" }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4 tracking-tight">
             Process
@@ -63,7 +63,7 @@ export default function Process() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.2, margin: "0px 0px -50px 0px" }}
                 >
                   {/* Number Badge */}
                   <div className="relative z-10 w-16 h-16 mx-auto mb-6 bg-primary-700 rounded-full flex items-center justify-center text-text-primary text-xl font-bold">
@@ -99,7 +99,7 @@ export default function Process() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2, margin: "0px 0px -50px 0px" }}
             >
               {/* Left Side - Number and Line */}
               <div className="flex flex-col items-center">

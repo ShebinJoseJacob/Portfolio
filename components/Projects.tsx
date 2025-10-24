@@ -39,7 +39,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3, margin: "0px 0px -100px 0px" }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4 tracking-tight">
             Projects
@@ -57,7 +57,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.15, margin: "0px 0px -80px 0px" }}
               whileHover={{ y: -4 }}
             >
               {/* Image */}

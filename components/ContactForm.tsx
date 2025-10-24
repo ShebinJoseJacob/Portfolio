@@ -62,7 +62,7 @@ export default function ContactForm() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3, margin: "0px 0px -100px 0px" }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
             Get Started
@@ -78,7 +78,7 @@ export default function ContactForm() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.2, margin: "0px 0px -100px 0px" }}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             {/* Name */}
@@ -241,7 +241,7 @@ export default function ContactForm() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3, margin: "0px 0px -50px 0px" }}
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a

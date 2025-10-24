@@ -46,7 +46,7 @@ export default function Partners() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3, margin: "0px 0px -100px 0px" }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4 tracking-tight">
             Partners
@@ -61,7 +61,7 @@ export default function Partners() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1, margin: "0px 0px -50px 0px" }}
         >
           {partners.map((partner, index) => (
             <motion.div
@@ -70,7 +70,7 @@ export default function Partners() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.05 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2, margin: "0px 0px -50px 0px" }}
               whileHover={{ scale: 1.05 }}
             >
               {/* Partner Name */}
