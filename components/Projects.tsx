@@ -8,25 +8,25 @@ const projects = [
     title: "Environmental Monitor",
     description: "Multi-sensor system with real-time analytics.",
     tags: ["Arduino", "Edge ML", "Sensing"],
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
   },
   {
     title: "Vision System",
     description: "AI-powered visual inspection for quality control.",
     tags: ["Computer Vision", "QA", "TensorFlow"],
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
   },
   {
     title: "Wireless Logger",
     description: "Battery-powered data acquisition with 2-year life.",
     tags: ["IoT", "Low Power", "LoRaWAN"],
-    image: "https://images.unsplash.com/photo-1581092160607-ee67e7a5a5f4?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&q=80",
   },
   {
     title: "Meter Digitizer",
     description: "Computer vision retrofit for legacy analog gauges.",
     tags: ["Retrofit", "Edge AI", "Industrial"],
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
   },
 ];
 

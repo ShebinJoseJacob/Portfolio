@@ -78,7 +78,7 @@ export default function Hero() {
             initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: shouldReduceMotion ? 0 : 1, delay: shouldReduceMotion ? 0 : 0.4 }}
-            className="w-full h-auto aspect-square order-1 lg:order-2"
+            className="w-full h-[300px] md:h-auto md:aspect-square order-1 lg:order-2"
           >
             <SplineScene
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"

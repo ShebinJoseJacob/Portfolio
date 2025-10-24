@@ -10,6 +10,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* Mobile optimization */
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
 }
 
 body {
@@ -19,6 +22,30 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
+  /* Mobile performance optimizations */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  overscroll-behavior-y: none;
+}
+
+/* Mobile performance optimizations */
+@media (max-width: 768px) {
+  /* Optimize scroll performance */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Reduce motion on low-end devices */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
