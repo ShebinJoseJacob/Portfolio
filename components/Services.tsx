@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cpu, Code, Cloud, Brain, CircuitBoard, TestTube } from "lucide-react";
+import { Cpu, Code, Cloud, Brain, CircuitBoard, FileText } from "lucide-react";
 
 const services = [
   {
@@ -30,9 +30,9 @@ const services = [
     description: "Professional board layouts and assembly services",
   },
   {
-    icon: TestTube,
-    title: "Product Testing & Validation",
-    description: "Comprehensive testing and certification support",
+    icon: FileText,
+    title: "Technical Content Creation",
+    description: "Documentation, tutorials, and technical blogs for your products",
   },
 ];
 
@@ -60,7 +60,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1, margin: "-50px" }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
             Services
@@ -75,7 +75,7 @@ export default function Services() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1, margin: "-100px" }}
         >
           {services.map((service, index) => (
             <motion.div
@@ -83,6 +83,7 @@ export default function Services() {
               variants={item}
               whileHover={{ y: -4 }}
               className="group relative bg-primary-800/30 border border-primary-700 rounded-lg p-8 transition-all hover:border-primary-600"
+              style={{ willChange: 'transform, opacity' }}
             >
               <div className="mb-4">
                 <div className="w-12 h-12 bg-primary-700/50 rounded-lg flex items-center justify-center">

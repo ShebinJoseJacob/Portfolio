@@ -1,0 +1,13 @@
+/* Minimal Studio customizations */
+
+/* Increase editor width for better writing experience */
+[data-testid="pt-editor"] {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Better text spacing in editor */
+[data-testid="text-block"] {
+  font-size: 16px;
+  line-height: 1.75;
+}

@@ -1,7 +1,8 @@
 "use client";
 
-import { Linkedin, Github, Twitter, Mail } from "lucide-react";
+import { Linkedin, Github, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -92,7 +93,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://linkedin.com"
+                  href="https://in.linkedin.com/company/coderscafe"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-text-muted hover:text-text-primary transition-colors text-sm flex items-center gap-2"
@@ -103,7 +104,40 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com"
+                  href="https://x.com/coderscafetech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted hover:text-text-primary transition-colors text-sm flex items-center gap-2"
+                >
+                  <Twitter size={16} />
+                  X (Twitter)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/CodersCafeTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted hover:text-text-primary transition-colors text-sm flex items-center gap-2"
+                >
+                  <Facebook size={16} />
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/CodersCafeTech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted hover:text-text-primary transition-colors text-sm flex items-center gap-2"
+                >
+                  <Instagram size={16} />
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/CodersCafeTech"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-text-muted hover:text-text-primary transition-colors text-sm flex items-center gap-2"
@@ -114,22 +148,13 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://twitter.com"
+                  href="https://www.youtube.com/@CodersCafeTech"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-text-muted hover:text-text-primary transition-colors text-sm flex items-center gap-2"
                 >
-                  <Twitter size={16} />
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:hello@coderscafe.com"
-                  className="text-text-muted hover:text-text-primary transition-colors text-sm flex items-center gap-2"
-                >
-                  <Mail size={16} />
-                  Email
+                  <Youtube size={16} />
+                  YouTube
                 </a>
               </li>
             </ul>

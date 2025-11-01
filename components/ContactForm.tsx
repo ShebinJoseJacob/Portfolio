@@ -36,9 +36,22 @@ export default function ContactForm() {
     setSubmitStatus(null);
 
     try {
-      // Simulate API call - Replace with actual form submission
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      console.log("Form data:", data);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        if (response.status === 429) {
+          throw new Error('Too many requests. Please try again in 15 minutes.');
+        }
+        throw new Error(result.error || 'Failed to submit form');
+      }
 
       setSubmitStatus("success");
       reset();
@@ -245,29 +258,20 @@ export default function ContactForm() {
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a
-              href="mailto:hello@coderscafe.com"
+              href="mailto:mail.coderscafe@gmail.com"
               className="flex items-center gap-2 text-text-secondary hover:text-text-primary transition-colors"
             >
               <Mail size={20} />
-              hello@coderscafe.com
+              mail.coderscafe@gmail.com
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://in.linkedin.com/company/coderscafe"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-text-secondary hover:text-text-primary transition-colors"
             >
               <Linkedin size={20} />
               LinkedIn
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-text-secondary hover:text-text-primary transition-colors"
-            >
-              <Github size={20} />
-              GitHub
             </a>
           </div>
         </motion.div>

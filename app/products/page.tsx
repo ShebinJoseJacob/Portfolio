@@ -69,9 +69,8 @@ export default function ProductsPage() {
               <motion.div
                 key={product.id}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true, amount: 0.2 }}
                 className="border border-primary-700/50 rounded-lg p-8 bg-primary-900/30 hover:border-primary-600 transition-all group"
               >
                 <div className="flex items-start gap-6">
@@ -113,9 +112,8 @@ export default function ProductsPage() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, amount: 0.2 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-text-primary mb-6">
               Need a Custom Solution?

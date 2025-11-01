@@ -4,11 +4,12 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { scrollToSection } from "@/lib/utils";
 import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 
 const SplineScene = dynamic(() => import("@/components/ui/splite"), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-full flex items-center justify-center">
+    <div className="w-full h-full flex items-center justify-center bg-primary-900/50">
       <div className="w-16 h-16 border-4 border-accent-blue/20 border-t-accent-blue rounded-full animate-spin"></div>
     </div>
   ),
@@ -16,6 +17,12 @@ const SplineScene = dynamic(() => import("@/components/ui/splite"), {
 
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
+  const [shouldLoadSpline, setShouldLoadSpline] = useState(false);
+
+  useEffect(() => {
+    // Load Spline immediately in the background
+    setShouldLoadSpline(true);
+  }, []);
   return (
     <section
       id="hero"
@@ -49,7 +56,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: shouldReduceMotion ? 0 : 0.8, delay: shouldReduceMotion ? 0 : 0.4 }}
             >
-              IoT & embedded prototyping in weeks
+              Ideas to Prototypes in weeks
             </motion.p>
 
             <motion.div
@@ -80,10 +87,16 @@ export default function Hero() {
             transition={{ duration: shouldReduceMotion ? 0 : 1, delay: shouldReduceMotion ? 0 : 0.4 }}
             className="w-full h-[300px] md:h-auto md:aspect-square order-1 lg:order-2"
           >
-            <SplineScene
-              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="h-full w-full"
-            />
+            {shouldLoadSpline ? (
+              <SplineScene
+                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                className="h-full w-full"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-primary-900/50">
+                <div className="text-text-muted text-sm">Loading 3D scene...</div>
+              </div>
+            )}
           </motion.div>
         </div>
       </div>

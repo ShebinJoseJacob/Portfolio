@@ -6,13 +6,13 @@ import { Zap, Award, Layers } from "lucide-react";
 const features = [
   {
     icon: Zap,
-    stat: "2-8 Weeks",
+    stat: "4-8 Weeks",
     title: "Fast",
     description: "Concept to working prototype.",
   },
   {
     icon: Award,
-    stat: "10+ Years",
+    stat: "5+ Years",
     title: "Experienced",
     description: "Deep expertise in embedded systems.",
   },
@@ -53,6 +53,7 @@ export default function WhyChooseUs() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true, amount: 0.2 }}
               whileHover={{ y: -4 }}
+              style={{ willChange: 'transform, opacity' }}
             >
               {/* Icon */}
               <div className="mb-6">

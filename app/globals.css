@@ -48,3 +48,14 @@ h1 {
 button, input, select, textarea {
   font-family: inherit;
 }
+
+/* Improve animation performance and reduce flash */
+@layer utilities {
+  /* Ensure smooth rendering for animated elements */
+  .grid > div {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
